@@ -49,7 +49,7 @@ const Navbar = (props) => {
                     {section.title}
                 </Link>
             ))}
-            <Button variant="contained" size="small" color="secondary" className={classes.customButton}>
+            <Button variant="contained" size="small" color="secondary" className={classes.customButton} href="/login">
                 Acceder
             </Button>
         </Toolbar>

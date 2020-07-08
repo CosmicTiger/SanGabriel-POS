@@ -8,7 +8,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function IniciarSesion() {
+
+export default function RegistroUsuario() {
     const classes = useStyles();
 
     return (
@@ -57,10 +58,10 @@ export default function IniciarSesion() {
                 <CssBaseline />
                 <div className={classes.paper}>
                     <Avatar className={classes.avatar}>
-                        <LockOutlinedIcon />
+                        <AccountCircleIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        Iniciar Sesión
+
                     </Typography>
                     <form className={classes.form} noValidate>
                         <TextField
@@ -85,9 +86,16 @@ export default function IniciarSesion() {
                             id="password"
                             autoComplete="current-password"
                         />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Recuérdame"
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="confirm_password"
+                            label="Confirmar Contraseña"
+                            type="password"
+                            id="password"
+                            autoComplete="current-password"
                         />
                         <Button
                             type="submit"
@@ -97,20 +105,8 @@ export default function IniciarSesion() {
                             className={classes.submit}
                             href="/admin"
                         >
-                            Acceder
+                            Registrarse
                         </Button>
-                        <Grid container>
-                            <Grid item xs>
-                                <Link href="#" variant="body2">
-                                    ¿Olvidó su contraseña?
-                                </Link>
-                            </Grid>
-                            <Grid item>
-                                <Link href="/suscription" variant="body2">
-                                    {"¿No tiene una cuenta? Regístrese"}
-                                </Link>
-                            </Grid>
-                        </Grid>
                     </form>
                 </div>
                 <Box mt={8}>
