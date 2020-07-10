@@ -7,10 +7,10 @@ import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import {Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
+import {Button } from '@material-ui/core';
 import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -19,10 +19,10 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import {mainListItems} from "../../components/DashboardMenu";
-import Chart from "../../containers/Chart";
-import {Deposits} from "../../components/Card"
-import General1 from "../../containers/Lists/General";
+import { mainListItems} from "../../../components/DashboardMenu";
+import Chart from "../../../containers/Chart";
+import {Deposits} from "../../../components/Card"
+import Ordenes1 from "../../../containers/Lists/Ordenes";
 
 const drawerWidth = 240;
 
@@ -88,8 +88,14 @@ const useStyles = makeStyles((theme) => ({
             width: theme.spacing(9),
         },
     },
-    appBarSpacer: theme.mixins.toolbar,
 
+    session:{
+        width: '80px',
+        height: '100px',
+        background: 'gray',
+        border: 'black solid 1px',
+    },
+    appBarSpacer: theme.mixins.toolbar,
     content: {
         flexGrow: 1,
         height: '100vh',
@@ -108,15 +114,9 @@ const useStyles = makeStyles((theme) => ({
     fixedHeight: {
         height: 240,
     },
-    session:{
-        width: '80px',
-        height: '100px',
-        background: 'gray',
-        border: 'black solid 1px',
-    },
 }));
 
-export default function Dashboard() {
+export default function Ordenes() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
     const handleDrawerOpen = () => {
@@ -176,30 +176,20 @@ export default function Dashboard() {
                 <Divider />
                 <List>{mainListItems}</List>
                 <Divider />
-                
+                <List>{ }</List>
             </Drawer>
-            
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
                         {/* Grafico */}
-                        <Grid item xs={12} md={8} lg={9}>
-                            <Paper className={fixedHeightPaper}>
-                                <Chart />
-                            </Paper>
-                        </Grid>
-                        {/* Deposito */}
-                        <Grid item xs={12} md={4} lg={3}>
-                            <Paper className={fixedHeightPaper}>
-                                <Deposits />
-                            </Paper>
-                        </Grid>
-
+                        
+                        {/* Ingresos Recientes */}
+                       
                         {/* Recent Orders */}
                         <Grid item xs={12}>
                             <Paper className={classes.paper}>
-                                <General1/>
+                                <Ordenes1/>
                             </Paper>
                         </Grid>
                         

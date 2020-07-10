@@ -3,6 +3,7 @@ import { useTheme } from '@material-ui/core/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from "../../components/Title";
 
+
 // Generate Sales Data
 function createData(time, amount) {
     return { time, amount };
@@ -34,6 +35,7 @@ export default function Chart() {
                         right: 16,
                         bottom: 0,
                         left: 24,
+                        background: '#F5AF19',
                     }}
                 >
                     <XAxis dataKey="time" stroke={theme.palette.text.secondary} />
@@ -43,7 +45,7 @@ export default function Chart() {
                             position="left"
                             style={{ textAnchor: 'middle', fill: theme.palette.text.primary }}
                         >
-                            Ventas ($)
+                            
                         </Label>
                     </YAxis>
                     <Line type="monotone" dataKey="amount" stroke={theme.palette.primary.main} dot={false} />
@@ -52,3 +54,4 @@ export default function Chart() {
         </React.Fragment>
     );
 }
+
