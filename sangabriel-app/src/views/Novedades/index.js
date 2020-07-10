@@ -5,6 +5,7 @@ import Membership from '../../containers/Membresia';
 import Interior from '../../containers/Interiores';
 import Combinacion from '../../containers/Combinaciones';
 import {Header} from "../../components/Header";
+import Footer from "../../components/Footer";
 
 /**
 * @author
@@ -23,6 +24,7 @@ const Novedades = () => {
       <Interior/>
       <div className="barraB">x</div>
       <Combinacion/>
+      <Footer />
     </div>
     
    )

@@ -6,6 +6,7 @@ import MisionVision from '../../containers/ContenedoresAboutUs/MisionVision';
 import NuestrosValores from '../../containers/ContenedoresAboutUs/NuestrosValores';
 import Mapa from '../../containers/ContenedoresAboutUs/Mapa';
 import {Header} from "../../components/Header";
+import Footer from "../../components/Footer";
 
 /**
 * @author
@@ -21,6 +22,7 @@ const AboutUs = (props) => {
         <MisionVision/>
         <NuestrosValores/>
         <Mapa/>
+        <Footer />
     </div>
    )
 
