@@ -1,0 +1,64 @@
+.sectionTarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(../../../assets/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.pNombre{
+    margin-top: 10px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+.imgT{
+    width: 100%;
+}
+.contenedorCeramica{
+    padding: 40px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 30%;
+}
+
+.contenedorFontaneria{
+    padding: 40px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 30%;
+}
+
+.contenedorInteriores{
+    padding: 40px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 30%;
+}
+
+.contenedorMateriales{
+    padding: 40px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 30%;
+}
+.contenedorPintura{
+    padding: 40px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 30%;
+}
+.contenedorMaquinaria{
+    padding: 40px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 30%;
+}
+
+.carrusel{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-left: 50%;
+}

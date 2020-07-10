@@ -1,0 +1,16 @@
+.imagenC{
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.imgC{
+    width: 100%;
+}
+
+.tituloC{
+    width: 60%;
+    font-size: 40px;
+    margin-top: 20px;
+    border-bottom: 3px solid #F5AF19;
+}
