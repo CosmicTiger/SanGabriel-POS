@@ -1,0 +1,20 @@
+.Entregando{
+    background-image: url("../../../assets/Inicio.png");
+    background-repeat: no-repeat;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.TextoE{
+    width: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    position: absolute;
+    bottom: 16.65%;
+}
+
+.guayola{
+    margin-left: 25px;
+    margin-right: 25px;
+}

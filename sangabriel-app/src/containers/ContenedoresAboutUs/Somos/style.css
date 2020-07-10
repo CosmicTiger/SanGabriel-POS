@@ -1,0 +1,30 @@
+.QuienesSomos{
+    background-color: #FF9000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ParrafoIzq{
+    color: white;
+    border-left: 3px solid #292E49;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.ParrafoDer{
+    color: white;
+    border-bottom: 3px solid #292E49;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 40px;
+}
+
+.somosh3{
+    font-size: 30px;
+    color: #292E49;
+}
