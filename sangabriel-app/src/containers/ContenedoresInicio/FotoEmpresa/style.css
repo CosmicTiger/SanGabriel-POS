@@ -1,0 +1,8 @@
+.seccionImagen{
+    display: flex;
+    height: 500px;
+}
+
+.imgF{
+    width: 100%;
+}

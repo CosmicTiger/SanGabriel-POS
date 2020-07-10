@@ -1,11 +1,18 @@
 import React from 'react';
 import './style.css';
-import Footer from '../../components/Footer';
+import LogoInicio from '../ContenedoresInicio/FotoEmpresa';
+import ProductosIni from '../ContenedoresInicio/ProductosInicio';
+import {Header} from "../../components/Header";
 
 const Home = () => { 
     return(
         <div>
-            <Footer title="Footer" description="Acá, las cositas"/>
+            <Header />
+            <div>
+                <LogoInicio/>
+            </div>
+            <div className="barraB">x</div>
+            <ProductosIni/>
         </div>
     );
 }

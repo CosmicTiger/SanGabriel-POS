@@ -6,6 +6,7 @@ import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
+import {Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
@@ -16,14 +17,18 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems} from "../../components/DashboardMenu";
+import {mainListItems} from "../../components/DashboardMenu";
 import Chart from "../../containers/Chart";
 import {Deposits} from "../../components/Card"
-import Orders from "../../containers/Lists";
+import General1 from "../../containers/Lists/General";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
+    logo: {
+        width: '50px',
+    },
+
     root: {
         display: 'flex',
     },
@@ -82,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     appBarSpacer: theme.mixins.toolbar,
+
     content: {
         flexGrow: 1,
         height: '100vh',
@@ -99,6 +105,12 @@ const useStyles = makeStyles((theme) => ({
     },
     fixedHeight: {
         height: 240,
+    },
+    session:{
+        width: '80px',
+        height: '100px',
+        background: 'gray',
+        border: 'black solid 1px',
     },
 }));
 
@@ -128,15 +140,25 @@ export default function Dashboard() {
                         <MenuIcon />
                     </IconButton>
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                        Panel de Control
+                        Opciones de Administrador
                     </Typography>
+                    
+                    <div id='titulo'> Nombre de Usuario </div> 
                     <IconButton color="inherit">
                         <Badge badgeContent={4} color="secondary">
-                            <NotificationsIcon />
+                        <img className={classes.logo}
+                        src={'https://image.flaticon.com/icons/svg/149/149071.svg'}
+                        alt="Logo_Usuario" 
+                        />
                         </Badge>
                     </IconButton>
+
+                    <Button className={classes.session} href="/login"> 
+                    Cerrar Session
+                    </Button>
                 </Toolbar>
             </AppBar>
+            
             <Drawer
                 variant="permanent"
                 classes={{
@@ -152,30 +174,33 @@ export default function Dashboard() {
                 <Divider />
                 <List>{mainListItems}</List>
                 <Divider />
-                <List>{secondaryListItems}</List>
+                
             </Drawer>
+            
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
-                        {/* Chart */}
+                        {/* Grafico */}
                         <Grid item xs={12} md={8} lg={9}>
                             <Paper className={fixedHeightPaper}>
                                 <Chart />
                             </Paper>
                         </Grid>
-                        {/* Recent Deposits */}
+                        {/* Deposito */}
                         <Grid item xs={12} md={4} lg={3}>
                             <Paper className={fixedHeightPaper}>
                                 <Deposits />
                             </Paper>
                         </Grid>
+
                         {/* Recent Orders */}
                         <Grid item xs={12}>
                             <Paper className={classes.paper}>
-                                <Orders />
+                                <General1/>
                             </Paper>
                         </Grid>
+                        
                     </Grid>
                 </Container>
             </main>

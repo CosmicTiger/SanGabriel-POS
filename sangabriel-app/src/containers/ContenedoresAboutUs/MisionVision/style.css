@@ -1,0 +1,24 @@
+.Principal{
+    background: #292E49;
+    display: flex;
+}
+
+.misvish2{
+    color: #FF9000;
+    text-align: center;
+}
+
+.parrafo{
+    color: white;
+    text-align: center;
+}
+
+.Mision{
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.Vision{
+    padding: 30px;
+    box-sizing: border-box;
+}
