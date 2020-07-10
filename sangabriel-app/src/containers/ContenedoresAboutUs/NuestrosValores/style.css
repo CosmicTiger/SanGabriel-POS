@@ -1,0 +1,37 @@
+.Nuestrosvals{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagenvalores{
+    width: 50%;
+}
+
+.valores{
+    width: 50%;
+    margin: 30px;
+
+}
+
+.imgvals{
+    width: 90%;
+    margin-top: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 40px;
+}
+
+.intro{
+    border-bottom: 3px solid #FF9000;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.vals{
+    font-size: 25px;
+}
+
+
+
+
+
