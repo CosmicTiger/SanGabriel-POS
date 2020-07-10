@@ -15,10 +15,4 @@ const Entregando = (props) => {
 
  }
 
- /*
- * <div className="TextoE">
-            <p className="guayola">Entregando productos más allá productos de calidad, confianza y servicio a nuestros clientes.</p>
-        </div>
- * */
-
 export default Entregando

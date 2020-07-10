@@ -23,6 +23,8 @@ import { mainListItems} from "../../../components/DashboardMenu";
 import Chart from "../../../containers/Chart";
 import {Deposits} from "../../../components/Card"
 import Usuarios1 from '../../../containers/Lists/Usuarios';
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 const drawerWidth = 240;
 
@@ -144,19 +146,24 @@ export default function Usuarios() {
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
                         Opciones de Administrador
                     </Typography>
-                    
-                    <div id='titulo'> Nombre de Usuario </div> 
+
+                    <div id='titulo'> Nombre de Usuario </div>
                     <IconButton color="inherit">
                         <Badge badgeContent={4} color="secondary">
-                        <img className={classes.logo}
-                        src={'https://image.flaticon.com/icons/svg/149/149071.svg'}
-                        alt="Logo_Usuario" 
-                        />
+                            <AccountCircle />
                         </Badge>
                     </IconButton>
-                    <Button className={classes.session} href="/login"> 
-                    Cerrar Session
-                    </Button>
+
+                    <IconButton color="inherit">
+                        <a href='/login' >
+                            <ExitToAppIcon
+                                style={{
+                                    color: 'white',
+                                    height: '40px'
+                                }}
+                            />
+                        </a>
+                    </IconButton>
                 </Toolbar>
             </AppBar>
             

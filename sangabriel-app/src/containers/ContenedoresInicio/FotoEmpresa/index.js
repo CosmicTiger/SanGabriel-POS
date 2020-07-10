@@ -6,7 +6,7 @@ import './style.css';
 * @function LogoInicio
 **/
 
-const LogoInicio = (props) => {
+export const LogoInicio = (props) => {
   return(
     <section className="seccionImagen">
         <img className="imgF" src={require('../../../assets/Ferreteria.png')} alt=""/>
@@ -14,5 +14,3 @@ const LogoInicio = (props) => {
    )
 
  }
-
-export default LogoInicio

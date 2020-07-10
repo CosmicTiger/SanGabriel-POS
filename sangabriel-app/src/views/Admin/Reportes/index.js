@@ -27,6 +27,8 @@ import {Deposits2} from "../../../components/Card"
 import {Deposits3} from "../../../components/Card"
 import {Deposits4} from "../../../components/Card"
 import Orders from "../../../containers/Lists/General";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 const drawerWidth = 240;
 
@@ -105,7 +107,6 @@ const useStyles = makeStyles((theme) => ({
         height: '100vh',
         overflow: 'auto',
     },
-
     session:{
         width: '80px',
         height: '100px',
@@ -154,21 +155,26 @@ export default function Reportes() {
                         <MenuIcon />
                     </IconButton>
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                        Panel de Control
+                        Opciones de Administrador
                     </Typography>
-                    <div id='titulo'> Nombre de Usuario </div> 
+
+                    <div id='titulo'> Nombre de Usuario </div>
                     <IconButton color="inherit">
                         <Badge badgeContent={4} color="secondary">
-                        <img className={classes.logo}
-                        src={'https://image.flaticon.com/icons/svg/149/149071.svg'}
-                        alt="Logo_Usuario" 
-                        />
+                            <AccountCircle />
                         </Badge>
                     </IconButton>
 
-                    <Button className={classes.session} href="/login"> 
-                    Cerrar Session
-                    </Button>
+                    <IconButton color="inherit">
+                        <a href='/login' >
+                            <ExitToAppIcon
+                                style={{
+                                    color: 'white',
+                                    height: '40px'
+                                }}
+                            />
+                        </a>
+                    </IconButton>
                 </Toolbar>
             </AppBar>
             <Drawer

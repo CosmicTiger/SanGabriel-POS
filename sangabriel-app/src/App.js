@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
-import Home from "./containers/Home";
+import Home from "./views/Home";
 import IniciarSesion from "./views/Login";
 import RegistroUsuario from "./views/Register";
 import Dashboard from "./views/Admin";

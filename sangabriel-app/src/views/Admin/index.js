@@ -6,7 +6,6 @@ import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import {Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
@@ -16,11 +15,13 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import {mainListItems} from "../../components/DashboardMenu";
 import Chart from "../../containers/Chart";
 import {Deposits} from "../../components/Card"
 import General1 from "../../containers/Lists/General";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+
 
 const drawerWidth = 240;
 
@@ -34,11 +35,13 @@ const useStyles = makeStyles((theme) => ({
     },
     toolbar: {
         paddingRight: 24, // keep right padding when drawer closed
+        backgroundColor: 'blue',
     },
     toolbarIcon: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
+        backgroundColor: '#F5AF19',
         padding: '0 8px',
         ...theme.mixins.toolbar,
     },
@@ -109,8 +112,6 @@ const useStyles = makeStyles((theme) => ({
     session:{
         width: '80px',
         height: '100px',
-        background: 'gray',
-        border: 'black solid 1px',
     },
 }));
 
@@ -146,16 +147,20 @@ export default function Dashboard() {
                     <div id='titulo'> Nombre de Usuario </div> 
                     <IconButton color="inherit">
                         <Badge badgeContent={4} color="secondary">
-                        <img className={classes.logo}
-                        src={'https://image.flaticon.com/icons/svg/149/149071.svg'}
-                        alt="Logo_Usuario" 
-                        />
+                        <AccountCircle />
                         </Badge>
                     </IconButton>
 
-                    <Button className={classes.session} href="/login"> 
-                    Cerrar Session
-                    </Button>
+                    <IconButton color="inherit">
+                        <a href='/login' >
+                            <ExitToAppIcon
+                                style={{
+                                    color: 'white',
+                                    height: '40px'
+                                }}
+                            />
+                        </a>
+                    </IconButton>
                 </Toolbar>
             </AppBar>
             
@@ -168,11 +173,13 @@ export default function Dashboard() {
             >
                 <div className={classes.toolbarIcon}>
                     <IconButton onClick={handleDrawerClose}>
-                        <ChevronLeftIcon />
+                        <ChevronLeftIcon style={{ color: 'white' }}/>
                     </IconButton>
                 </div>
                 <Divider />
-                <List>{mainListItems}</List>
+                <List>
+                    {mainListItems}
+                </List>
                 <Divider />
                 
             </Drawer>

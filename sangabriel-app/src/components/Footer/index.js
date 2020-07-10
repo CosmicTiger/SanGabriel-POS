@@ -2,49 +2,52 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import Copyright from "../Copyright";
+import Grid from '@material-ui/core/Grid';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+
 /**
 * @author Joker_lotusZero
 *
 **/
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="/">
-                ENP Productions
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
 const useStyles = makeStyles((theme) => ({
     footer: {
-        backgroundColor: theme.palette.background.paper,
-        // marginTop: theme.spacing(8),
-        padding: theme.spacing(6, 0),
+        padding: theme.spacing(6, 4),
+        backgroundColor: theme.palette.type === 'light' ? "blue" : theme.palette.grey[800],
+        borderTop: `1px solid ${theme.palette.divider}`,
+        marginTop: theme.spacing(8),
+        paddingTop: theme.spacing(3),
+        paddingBottom: theme.spacing(3),
+        [theme.breakpoints.up('sm')]: {
+            paddingTop: theme.spacing(6),
+            paddingBottom: theme.spacing(6),
+        },
+    },
+    barraA: {
+        padding: theme.spacing(1,3),
+        background: '#F5AF19',
+        color: '#F5AF19',
     },
 }));
 
-export default function Footer(props) {
+export default function Footer() {
     const classes = useStyles();
-    const { description, title } = props;
 
     return (
-        <footer className={classes.footer}>
-            <Container maxWidth="lg">
-                <Typography variant="h6" align="center" gutterBottom>
-                    {title}
-                </Typography>
-                {/* eslint-disable-next-line react/react-in-jsx-scope */}
-                <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                    {description}
-                </Typography>
-                <Copyright />
+        <footer>
+            <Container maxWidth="lg" component="footer"  className={classes.footer}>
+                <Grid container spacing={4} justify="space-evenly">
+                    <Grid item xs={6} md={3}>
+
+                    </Grid>
+
+                </Grid>
             </Container>
+            <div className={classes.barraA}>
+                <Copyright />
+            </div>
         </footer>
     );
 }

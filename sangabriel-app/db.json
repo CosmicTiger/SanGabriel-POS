@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Perlín",
+      "category": "Perlín",
+      "stock": "99",
+
+    }
+  ]
+}

@@ -13,26 +13,16 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from "../../containers/Forms/AddressForm";
 import PaymentForm from "../../containers/Forms/PaymentForm";
 import Review from "../../containers/Review";
-
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                San Gabriel POS
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
+import {HeaderMarket} from "../../components/Header";
+import Copyright from "../../components/Copyright";
+import Footer from "../../components/Footer";
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
         position: 'relative',
     },
     layout: {
-        width: 'auto',
+        paddingTop: theme.spacing(10),
         marginLeft: theme.spacing(2),
         marginRight: theme.spacing(2),
         [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
@@ -94,13 +84,7 @@ export default function Checkout() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <AppBar position="absolute" color="default" className={classes.appBar}>
-                <Toolbar>
-                    <Typography variant="h6" color="inherit" noWrap>
-                        San Gabriel POS
-                    </Typography>
-                </Toolbar>
-            </AppBar>
+            <HeaderMarket />
             <main className={classes.layout}>
                 <Paper className={classes.paper}>
                     <Typography component="h1" variant="h4" align="center">
@@ -146,8 +130,8 @@ export default function Checkout() {
                         )}
                     </React.Fragment>
                 </Paper>
-                <Copyright />
             </main>
+            <Footer />
         </React.Fragment>
     );
 }
