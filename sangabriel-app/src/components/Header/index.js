@@ -7,7 +7,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 
-import Navbar from '../Navbar';
+import {Navbar, NavbarMarket} from '../Navbar';
 
 /**
 * @author Joker_lotusZero
@@ -27,7 +27,7 @@ const sections = [
     { title: 'Novedades', url: '/news' },
 ];
 
-const Header = () => {
+export const Header = () => {
 
     const classes = useStyles();
 
@@ -41,4 +41,15 @@ const Header = () => {
     );
 }
 
-export default Header;
+export const HeaderMarket = () => {
+    const classes = useStyles();
+
+    return (
+        <div>
+            <CssBaseline />
+            <Container maxWidth="lg">
+                <NavbarMarket />
+            </Container>
+        </div>
+    );
+}

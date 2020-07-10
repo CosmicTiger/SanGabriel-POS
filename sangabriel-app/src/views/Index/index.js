@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import Header from "../../components/Header";
+import {Header} from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const Index = () => {
